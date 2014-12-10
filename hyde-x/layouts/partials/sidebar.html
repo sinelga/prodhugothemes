@@ -1,0 +1,31 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+    	<h1>Bloggi </h1>
+    	<img class="img-rounded media-object pull-left " src="http://lorempixel.com/400/200/fashion/{{ .Site.Title }} "> 
+     <!--  {{ with .Site.Params.gravatarHash }}<img src="http://www.gravatar.com/avatar/{{ . }}?s=200" alt="gravatar">{{ end }} -->
+      <h1>{{ .Site.Params.site }} </h1>
+      <p class="lead">{{ .Site.Title }}</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      
+      {{ range .Site.Menus.main }}
+      <li class="sidebar-nav-item"><a href="{{ .Url }}">{{ .Name }}</a></li>
+      {{end}}
+      <li  class="sidebar-nav-item"><a href="/rss.xml" type="application/rss+xml">Rss</a></li>
+    </ul>
+
+    <ul class="sidebar-nav">
+      {{ with .Site.Params.github }}<li class="sidebar-nav-item"><a href="{{ . }}">GitHub</a></li>{{ end }}
+      {{ with .Site.Params.linkedin }}<li class="sidebar-nav-item"><a href="{{ . }}">LinkedIn</a></li>{{ end }}
+      {{ with .Site.Params.googleplus }}<li class="sidebar-nav-item"><a href="{{ . }}">Google+</a></li>{{ end }}
+      {{ with .Site.Params.facebook }}<li class="sidebar-nav-item"><a href="{{ . }}">Facebook</a></li>{{ end }}
+      {{ with .Site.Params.twitter }}<li class="sidebar-nav-item"><a href="{{ . }}">Twitter</a></li>{{ end }}
+    </ul>
+
+
+<!--     <p>Copyright &copy; {{ .Now.Format "2006" }} <a href="{{ .Site.BaseUrl }}/license">License</a><br/>
+       Powered by <a href="http://hugo.spf13.com">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p> -->
+  </div>
+</div>

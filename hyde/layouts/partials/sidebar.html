@@ -1,0 +1,30 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>{{ .Site.Params.site }}</h1>
+      <p class="lead">
+      {{  .Site.Title }}
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Etusivu</a> </li>
+      <li><a href="{{ .Site.BaseUrl }}/post/">Arkisto</a></li>
+      <li><a href="{{ .Site.BaseUrl }}/rss.xml" type="application/rss+xml" >RSS</a></li>
+      
+          {{ range .Data.Pages }}
+    {{ if eq .Type "page" }}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></h2></li>       
+    {{ end }}
+  {{ end }}
+      
+      
+      {{ range .Site.Menus.main }}
+        <li><a href="{{.Url}}"> {{ .Name }} </a></li>
+         
+      {{end}}
+    </ul>
+
+    <p>{{ with .Site.Params.Copyright }}{{.}}{{ else }}&copy; {{.Now.Format "2006"}}.Rakennettu {{end}}</p>
+  </div>
+</div>

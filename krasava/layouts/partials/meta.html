@@ -1,0 +1,10 @@
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="locale" content="{{ .Site.Params.locale}} ">
+<meta name="themes" content="{{ .Site.Params.themes}} ">
+<meta name="site" content="{{ .Site.Params.site}} ">
+<meta name="keywords" content="{{ range  .Site.Params.keywords }}{{.}},{{ end }}">
+<meta name="description" content="{{ range  .Site.Params.description }}{{.}} {{ end }}">

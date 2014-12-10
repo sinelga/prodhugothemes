@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ .Title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<meta name="locale" content="{{ .Site.Params.locale}} ">
+<meta name="themes" content="{{ .Site.Params.themes}} ">
+<meta name="site" content="{{ .Site.Params.site}} ">
+<meta name="keywords" content="{{ range  .Site.Params.keywords }}{{.}},{{ end }}">
+<meta name="description" content="{{ range  .Site.Params.description }}{{.}} {{ end }}">
+
+    <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/application.css">
+    
+  </head>

@@ -1,0 +1,20 @@
+
+{{ template "theme/partials/head.html" . }}
+<body id="single">
+  {{ template "theme/partials/header.html" . }}
+
+  <div id="content-container">
+
+    <div class="post">
+    	<img  src="http://104.131.99.251/images/fi_FI/porno/3/rimage.jpg" alt="{{.Title}}" width="40%">
+  
+      <h1><i class="post-symbol fa fa-heart"></i>{{ .Title }}</h1>
+      <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+      <p class="post-content">{{ .Description }}</p>
+      <p class="post-content">{{ .Content }}</p>
+    </div>
+
+    {{ template "theme/partials/footer.html" . }}
+  </div>
+</body>
+</html>

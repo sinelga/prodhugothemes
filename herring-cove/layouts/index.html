@@ -1,0 +1,11 @@
+{{ template "theme/partials/header.html" . }}
+  <div id="article">
+      <h1>{{.Title}}</h1>
+  <ul class="posts">
+      {{ range first 15 .Data.Pages }}
+      	{{ if eq .Type "post"}}
+      		<li><span><a href="{{ .Permalink }}">{{ .Title }}</a><time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</h4></time></span></span></li>
+      	 {{ end }}
+      {{ end }}
+  </ul>
+{{ template "theme/partials/footer.html" }}
