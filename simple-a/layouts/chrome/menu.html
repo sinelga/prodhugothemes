@@ -1,7 +1,48 @@
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="/">{{.Site.Params.site}}</a>
+    <ul class="nav">
+    
+<!--     	<li class="active"><a href="#"><i class="icon-24-Add"> </i> New</a></li>
+    	<li><a href="#"><i class="icon-24-Navigation-Left"> </i> Back</a></li>
+    	<li><a href="#">Link</a></li> -->
+    	
+    </ul>							
+    <ul class="nav pull-right">
+    
+<!--     	<li class="small"><a href="#"><i class="icon-16-Search"> </i></a></li>
+    	<li class="small"><a href="#"><i class="icon-16-Message"> </i> Send message</a></li>
+    	<li class="small"><a href="#">User Name</a></li>
+    	 -->
+    	 {{ range .Site.Menus.main }}
+			<li class="small"><a href="{{ .Url }}">{{ .Name }}</a></li>
+		{{end}} 
+    	
+    </ul>
+  </div>
+</div>
+
+
+<!-- 
 <div class="navbar navbar-fixed-top">        
   <div id="navbar-inner">
           <div id="logo">
             <a href="http://ru.alexfinn.eu"><img src="/images/letter-a.png" width="100px"></img></a>
+            {{.Site.Params.site}}
           </div>
+                    {{ range .Site.Menus.main }}
+						<li><a href="{{ .Url }}">{{ .Name }}</a></li>
+					{{end}}
+          
   </div>
 </div>
+
+<ul class="nav">
+  <li class="active">
+    <a href="#">Home</a>
+  </li>
+  <li><a href="#">Link</a></li>
+  <li><a href="#">Link</a></li>
+</ul>
+ -->

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>    
-    <title>ALEXFINN - {{ .Title }}</title>
+    <title>{{ .Site.Title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
@@ -11,11 +11,11 @@
     <link rel="canonical" href="{{ .Permalink }}">
 
     <!-- atom & rss feed -->
-    <link href="/rss.xml" type="application/atom+xml" rel="alternate" title="{{ .Site.Title }}">    
+    <link href="/index.xml" type="application/atom+xml" rel="alternate" title="{{ .Site.Title }}">    
 
   </head>
   <body>    
-    {{ template "theme/chrome/menu.html" }}
+    {{ template "theme/chrome/menu.html" . }}
 
 <div class="container">
   <div class="content">

@@ -1,0 +1,139 @@
+/*!
+ * Datepicker for Bootstrap
+ *
+ * Copyright 2012 Stefan Petre
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+
+.datepicker
+{
+	top: 0;
+	left: 0;
+	padding: 0 0 5px 0;
+	margin-top: -1px;
+
+	> div
+	{
+		display: none;
+	}
+
+	table
+	{
+		width: @baseLineHeight * 12.6;
+		margin: 0;
+	}
+
+	td,
+	th
+	{
+		text-align: center;
+		padding: 0;
+		width: @baseLineHeight * 1.8;
+		height: @baseLineHeight * 1.2;
+		line-height: @baseLineHeight * 1.2;
+	}
+
+	td
+	{
+		&.day:hover
+		{
+			background: @grayLighter;
+			cursor: pointer;
+		}
+
+		&.old,
+		&.new
+		{
+			color: @grayLight;
+		}
+
+		&.active,
+		&.active:hover
+		{
+			.buttonBackground(@mainAccentColor, @mainAccentHighlight);
+		}
+
+		span
+		{
+			display: block;
+			width: @baseLineHeight * 3.15;
+			height: @baseLineHeight * 2.8;
+			line-height: @baseLineHeight * 2.8;
+			float: left;
+			margin: 0;
+			cursor: pointer;
+
+			&:hover
+			{
+				background: @grayLighter;
+			}
+
+			&.active
+			{
+				.buttonBackground(@mainAccentColor, @mainAccentHighlight);
+			}
+
+			&.old
+			{
+				color: @grayLight;
+			}
+		}
+	}
+
+	th
+	{
+		&.switch
+		{
+			text-transform: uppercase;
+			font-weight: normal;
+			padding: @baseLineHeight * 0.2 0;
+		}
+
+		&.next,
+		&.prev
+		{
+			font-size: @baseFontSize * 2;
+			padding: @baseLineHeight * 0.2 0;
+
+			i
+			{
+				margin-top: @baseLineHeight * 0.4;
+			}
+		}
+	}
+
+	thead tr:first-child th
+	{
+		cursor: pointer;
+
+		&:hover
+		{
+			background: @grayLighter;
+		}
+	}
+
+	tbody tr:first-child td
+	{
+		border-top: 1px solid #ddd;
+	}
+
+	.dow
+	{
+		color: @tableHeaderText;
+		text-transform: lowercase;
+		font-weight: normal;
+	}
+}
+
+.input-append
+{
+	&.date
+	{
+		.add-on i
+		{
+			cursor: pointer;
+		}
+	}
+}

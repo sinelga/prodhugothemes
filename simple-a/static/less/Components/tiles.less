@@ -1,0 +1,46 @@
+﻿
+
+[class*=tile]
+{
+    margin: 0 @tileSpace @tileSpace 0;
+    background-color: @tileAccentColor;
+    color: white;
+    float: left;
+    height: @tileSize;
+    padding: @tileSpace;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    h1, h2, h3, h4, h5, h6
+    {
+        line-height: normal;
+        margin: 0 0 @tileSpace / 2 0;
+    }
+
+    &:hover
+    {
+        background-color: @tileAccentHighlight;
+        cursor: pointer;
+		color: white;
+		text-decoration: none;
+    }
+
+    &.height2
+    {
+        height: @tileSize * 2 + @tileSpace;
+    }
+}
+
+.tileX(@columns)
+{
+    width: (@tileSize * @columns) + (@tileSpace * (@columns - 1));
+}
+
+.tile1 { .tileX(1); }
+.tile2 { .tileX(2); }
+.tile3 { .tileX(3); }
