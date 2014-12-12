@@ -6,12 +6,14 @@
         <div class="vertical">
             <div id="site-head-content" class="inner">
 
-                {{ if .Site.Params.logo }} <a id="blog-logo" href="{{ .Site.BaseUrl }}"><img src="{{ .Site.Params.logo }}" alt="Blog Logo" /></a>{{ end }}
+                {{ if .Site.Params.logopng }} <a id="blog-logo" href="{{ .Site.BaseUrl }}"><img src="{{ .Site.Params.logopng }}" alt="Blog Logo" /></a>{{ end }}
                 <h1 class="blog-title">{{ .Site.Title}}</h1>
+<!--                 
                 {{ if .Site.Params.description }}<h2 class="blog-description">{{ .Site.Params.description }}</h2> {{ else  }}
                 <h2 class="blog-description">Power puff girls</h2>
                 {{ end }}
-
+ -->
+ 				 <h2 class="blog-description">Bloggit</h2>
                 <a class='btn first'>Take a tour</a>
                 <a class='btn last'>Cut to the chase</a><br>
                 <i id='header-arrow' class="fa fa-angle-down"></i>

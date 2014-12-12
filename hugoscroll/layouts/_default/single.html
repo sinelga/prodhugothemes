@@ -2,10 +2,45 @@
     <body>
         <div class="content-wrapper">
             <div class="content-wrapper__inner">
+             {{ if .Site.Params.logopng }} <a id="blog-logo" href="{{ .Site.BaseUrl }}"><img src="{{ .Site.Params.logopng }}" alt="Blog Logo" /></a>{{ end }}
                 <div class="post">
                     <h1>{{ .Title }}</h1>
+               
                     <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
                     {{ .Content }}
+                    
+
+ {{ if eq .RelPermalink "/alltags/"}}	
+ 
+ <ul id="all-tags">
+  {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+    <li><a href="/tags/{{ $name | urlize }}">{{ $name }}</a></li>
+  {{ end }}
+</ul>       
+{{ end }}
+
+ {{ if eq .RelPermalink "/allcategories/"}}	
+ 
+ <ul id="all-tags">
+  {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+    <li><a href="/categories/{{ $name | urlize }}">{{ $name }}</a></li>
+  {{ end }}
+</ul>       
+{{ end }}
+
+ {{ if eq .RelPermalink "/alldescriptions/"}}	
+ 
+ <ul id="all-tags">
+  {{ range $name, $taxonomy := .Site.Taxonomies.descriptions }}
+    <li><a href="/descriptions/{{ $name | urlize }}">{{ $name }}</a></li>
+  {{ end }}
+</ul>       
+{{ end }}
+
+
+
+
+                    
                 </div>
             </div>
         </div>
