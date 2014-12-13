@@ -23,10 +23,11 @@
 						<time datetime="{{.Date.Format "2006-01-02T15:04:05Z07:00"}}" pubdate data-updated="true">{{ .Date.Format "January 2, 2006" }}</time>
 					</p>
 
+<!-- 					
 					<div class="sharing">
 						<a href="http://twitter.com/share" class="twitter-share-button" data-url="{{.Permalink}}" data-via="" data-counturl="{{.Permalink}}">Tweet</a>
 					</div>
-
+ -->
 					<p class="meta">
 						{{if .Next}}<a class="basic-alignment left" href="{{.Next.Permalink}}" title="Previous Post: {{.Next.Title}}">&laquo; {{.Next.Title}}</a>{{end}}
 						{{if .Prev}}<a class="basic-alignment right" href="{{.Prev.Permalink}}" title="Next Post: {{.Prev.Title}}">{{.Prev.Title}} &raquo;</a>{{end}}

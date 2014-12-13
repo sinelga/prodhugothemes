@@ -6,7 +6,7 @@
   <div id="content">
 
     <div class="blog-index">
-{{ range first 5 .Data.Pages.ByDate.Reverse }}
+{{ range first 5 (where .Data.Pages.ByDate.Reverse "Section" "post") }}
       <article>
         <header>
           <h1 class="entry-title"><a href="{{.Permalink}}">{{.Title}}</a></h1>

@@ -22,7 +22,7 @@
     <div class="span12">
 
       <div class="posts">
-        {{ range first 25 (where .Data.Pages "Section" "post")}}
+        {{ range first 5 (where .Data.Pages.ByDate.Reverse "Section" "post")}}
             
             <article class="post">
             
