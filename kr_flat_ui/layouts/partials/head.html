@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="{{ .Site.BaseUrl }}">
+  <title>{{.Site.Title}} </title>
+    
+  <meta name="locale" content="{{ .Site.Params.locale}} ">   
+  <meta name="themes" content="{{ .Site.Params.themes}} ">
+  <meta name="site" content="{{ .Site.Params.site}} ">
+  <meta name="keywords" content="{{ range  .Site.Params.keywords }}{{.}},{{ end }}">
+  <meta name="description" content="{{ range  .Site.Params.description }}{{.}} {{ end }}">
+  <link rel="alternate" type="application/atom+xml" title="{{.Site.Title}}" href="{{ .Site.BaseUrl }}/index.xml" />
+  
+
+    <!-- Loading Bootstrap -->
+    <link href="dist/css/vendor/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="dist/css/flat-ui.css" rel="stylesheet">
+   <!--  <link href="docs/assets/css/demo.css" rel="stylesheet"> -->
+
+    <!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="dist/js/vendor/html5shiv.js"></script>
+      <script src="dist/js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+<<body background="/images/background-cover.jpg"> 
+<!-- <<body> -->
+
+<img alt="" src="/images/logo.png">
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button> -->
+        <h4 class="modal-title" id="myModalLabel">Ilmainen rekisteröinti</h4>
+      </div>
+      <div class="modal-body">
+      
+                    <form role="form">
+                
+                <div class="form-group">
+    <label for="exampleInputEmail1">Sähköpostiosoite</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+  </div>
+                <div class="form-group">
+    <label for="exampleInputPassword1">Salasana</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+     <button type="submit" class="btn btn-default">Esittää</button>  
+       
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+        <button type="button" class="btn btn-primary">Tallenna muutokset</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
+
+	
+	<div class="container">
+
+		
+      <div class="row">
+        <div class="col-xs-12">
+                        
+        
+          <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                <span class="sr-only">Toggle navigation</span>
+              </button>            
+            </div>
+            {{ range .Site.Menus.main }}
+            	
+            	<a class="navbar-brand" href="{{.Url}}">{{ .Name }}</a>
+            {{ end }}
+ 
+ 
+          </nav><!-- /navbar -->
+        </div>
+      </div> 
+
+
+  
+
