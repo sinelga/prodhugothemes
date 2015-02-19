@@ -1,7 +1,7 @@
 {{ "<!-- hugo: enter themes/sshq/partials/page/sidebar.html -->" | safeHtml }}
 <aside class="sidebar">{{ $Site := .Site }}
   <section>
-    <h1>Recent Posts</h1>
+    <h1>Uusimmat viestit</h1>
     <ul id="recent_posts">
     {{ range first 5 .Data.Pages.ByDate.Reverse }}
       <li class="post"><a href="{{.Permalink}}">{{.Title}}</a></li>
@@ -17,7 +17,7 @@
     {{ end }}
   </section>
   <section>
-    <h1>Categories</h1>
+    <h1>Kategoriat</h1>
     {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
       <a href="{{ $Site.BaseUrl }}/categories/{{ $name | urlize }}">{{ $name }}</a>
     {{ end }}
